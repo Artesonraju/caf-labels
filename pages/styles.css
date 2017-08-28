@@ -1,0 +1,157 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+body {
+  font-size: 1.1em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  color: #222;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+  padding: 2rem 0.5rem 2rem 0.5rem;
+  background-color: #50B7E4;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+}
+
+header img {
+	display: block;
+	margin: auto;
+	width: 40px;
+}
+
+header h4 {
+  font-weight: 600;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0px;
+  color: #154E69;
+}
+
+.categories {
+	padding: 2rem 0 2rem;
+	background-color: #222;
+	color: #50B7E4;
+}
+
+.categories ul {
+	padding-top: 0.5rem;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.categories li {
+	padding: 0 1rem 0 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.categories a {
+	color: #fff;
+}
+
+.categories a:hover {
+	color: #c3dfeb;
+}
+
+section {
+	max-width: 1000px;
+	margin: auto;
+	padding: 2rem 0.5rem 2.5rem 0.5rem;
+}
+
+section h1 {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+	padding-bottom: 1rem;
+}
+
+.item {
+	padding-top: 1rem;
+	padding-bottom: 2.5rem;
+	min-height: 5rem;
+}
+
+.item img {
+		float: left;
+		margin-right: 1rem;
+}
+
+.item h4 {
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: 600;
+  font-size: 1.3em;
+}
+
+.item p {
+	padding-top: 0.3rem;
+}
+
+footer {
+	color: #fff;
+	background-color: #222;
+	padding: 2rem 0.5rem 2rem 0.5rem;
+	text-align: center;
+}
+
+footer > div {
+	padding: 0.5rem 0 0.5rem;
+}
+
+footer button {
+	background: none;
+	color: #50B7E4;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	text-decoration: underline;
+}
+
+footer button:hover {
+	color: #9dcce0;
+}
+
+footer a{
+	color:#50B7E4;
+}
+
+footer a:hover{
+	color: #9dcce0;
+}
