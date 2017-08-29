@@ -60,9 +60,13 @@ header h4 {
 }
 
 .categories {
-	padding: 2rem 0 2rem;
+	padding: 2rem 1rem 2rem;
 	background-color: #222;
 	color: #50B7E4;
+}
+
+.categories h4{
+	font-size: 1.2em;
 }
 
 .categories ul {
@@ -71,12 +75,13 @@ header h4 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .categories li {
 	padding: 0 1rem 0 1rem;
 	padding-bottom: 0.5rem;
+	min-width: 120px;
 }
 
 .categories a {
@@ -103,10 +108,10 @@ section h1 {
 .item {
 	padding-top: 1rem;
 	padding-bottom: 2.5rem;
-	min-height: 5rem;
+	min-height: 5.5rem;
 }
 
-.item img {
+.item a {
 		float: left;
 		margin-right: 1rem;
 }
