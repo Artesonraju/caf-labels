@@ -8,39 +8,6 @@
 	<link rel="stylesheet" href="pages/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 	<link rel="icon" type="image/png" href="pages/favicon.ico">
-	<script>
-		let selected = null;
-		let url = null;
-		function unselect(){
-			let div = document.getElementById(selected);
-			let img = div.firstChild.nextSibling;
-			if(div) {div.classList.remove('focus');}
-			if(div) {img.src=url;}
-			selected = null;
-			url = null;
-		};
-
-		function select(tag){
-			let old = selected;
-			if (selected) { unselect() };
-			if (old !== tag) {
-				let id = selected + '-img';
-				let div = document.getElementById(tag);
-				let img = div.firstChild.nextSibling;
-				if(div) {div.classList.add('focus');}
-				url = img.src;
-				if(img) {img.src='210x270/' + tag + '.png';}
-				selected = tag;
-			}
-		};
-
-		function init() {
-			let hash = window.location.hash.substr(1);
-    	if(hash) {select(hash)};
-		}
-
-		document.addEventListener("DOMContentLoaded", init);
-</script>
 </head>
 <body>
   <header>
@@ -380,4 +347,81 @@
 		</div>
 	</footer>
 </body>
+<script>
+	let selected = null;
+	let url = null;
+	function unselect(){
+		let div = document.getElementById(selected);
+		let img = div.firstChild.nextSibling;
+		if(div) {div.classList.remove('focus');}
+		if(div) {img.src=url;}
+		selected = null;
+		url = null;
+	};
+
+	function select(tag){
+		let old = selected;
+		if (selected) { unselect() };
+		if (old !== tag) {
+			let id = selected + '-img';
+			let div = document.getElementById(tag);
+			let img = div.firstChild.nextSibling;
+			if(div) {div.classList.add('focus');}
+			url = img.src;
+			if(img) {img.src='210x270/' + tag + '.png';}
+			selected = tag;
+		}
+	};
+
+	function init() {
+		let hash = window.location.hash.substr(1);
+		if(hash) {select(hash)};
+	}
+
+	document.addEventListener("DOMContentLoaded", init);
+
+	let images = [];
+	function preload() {
+			for (let i = 0; i < arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+			}
+	}
+
+	preload(
+			"210x270/10-dva-parc.png",
+			"210x270/11-initiation.png",
+			"210x270/20-rando-cool.png",
+			"210x270/21-rythme-moyen.png",
+			"210x270/22-bon-rythme.png",
+			"210x270/30-gros-denivelé.png",
+			"210x270/31-pente-raide.png",
+			"210x270/32-terrain-alpin.png",
+			"210x270/33-terrain-glaciaire.png",
+			"210x270/40-nuit-gite.png",
+			"210x270/41-nuit-refuge.png",
+			"210x270/42-nuit-chalet.png",
+			"210x270/43-nuit-abri.png",
+			"210x270/44-nuit-igloo.png",
+			"210x270/45-nuit-tente.png",
+			"210x270/46-nuit-trou.png",
+			"210x270/47-nuit-bivouac.png",
+			"210x270/50-quatre-skieurs.png",
+			"210x270/51-cinq-skieurs.png",
+			"210x270/52-plus-trois-skieurs.png",
+			"210x270/53-six-skieurs.png",
+			"210x270/54-sept-skieurs.png",
+			"210x270/55-huit-skieurs.png",
+			"210x270/56-neuf-skieurs.png",
+			"210x270/57-dix-skieurs.png",
+			"210x270/58-douze-skieurs.png",
+			"210x270/59-pleins-skieurs.png",
+			"210x270/70-deux-jours.png",
+			"210x270/71-trois-jours.png",
+			"210x270/72-quatre-jours.png",
+			"210x270/73-cinq-jours.png",
+			"210x270/74-six-jours.png",
+			"210x270/75-tept-jours.png",
+	)
+</script>
 </html>
