@@ -106,14 +106,22 @@ section h1 {
 }
 
 .item {
+	clear: both;
 	padding-top: 1rem;
 	padding-bottom: 2.5rem;
 	min-height: 5.5rem;
 }
 
-.item a {
+.item.focus {
+	padding-bottom: 4.5rem;
+	min-height: 13.5rem;
+	border-radius: 30px;
+}
+
+.item img {
 		float: left;
 		margin-right: 1rem;
+		cursor: pointer;
 }
 
 .item h4 {
@@ -123,8 +131,18 @@ section h1 {
   font-size: 1.3em;
 }
 
+.item.focus h4 {
+	padding-top: 2rem;
+	font-weight: 600;
+  font-size: 2em;
+}
+
 .item p {
 	padding-top: 0.3rem;
+}
+
+.item.focus p {
+	font-size: 1.3em;
 }
 
 footer {
