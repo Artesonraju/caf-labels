@@ -34,6 +34,7 @@ body {
 }
 
 header {
+	position: relative;
   padding: 2rem 0.5rem 2rem 0.5rem;
   background-color: #50B7E4;
 }
@@ -57,6 +58,18 @@ header h4 {
   text-align: center;
   margin: 0px;
   color: #154E69;
+}
+
+header a {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	cursor: pointer;
+	color: #154E69;
+}
+
+header a:hover {
+	color: #266a8a;
 }
 
 .categories {
@@ -92,17 +105,56 @@ header h4 {
 	color: #c3dfeb;
 }
 
+.slides {
+	position: relative;
+}
+
+.slides .categories {
+	display: none;
+}
+
 section {
 	max-width: 1000px;
 	margin: auto;
 	padding: 2rem 0.5rem 2.5rem 0.5rem;
 }
 
-section h1 {
+section h2 {
   font-weight: 600;
   font-size: 2em;
   text-align: center;
 	padding-bottom: 1rem;
+}
+
+.slides section:not(.showing) {
+	padding: 0;
+}
+
+.slides section:not(.showing) > h2 {
+	display: none;
+}
+
+.slider {
+	display: none;
+}
+
+.slides .slider {
+	display: block;
+	color: #487fa3;
+	position: absolute;
+	top: 1em;
+}
+
+.slides .slider:hover {
+	cursor: pointer;
+}
+
+.slides .slider.previous {
+	left : 1em;
+}
+
+.slides .slider.next {
+	right: 1em;
 }
 
 .item {
@@ -115,13 +167,28 @@ section h1 {
 .item.focus {
 	padding-bottom: 4.5rem;
 	min-height: 13.5rem;
-	border-radius: 30px;
 }
 
 .item img {
 		float: left;
 		margin-right: 1rem;
 		cursor: pointer;
+}
+
+.item img.hidden {
+	display: none;
+}
+
+.slides .item img {
+	pointer-events: none;
+}
+
+.slides .item img {
+	display: none;
+}
+
+.slides .item img:not(.small) {
+	display: block;
 }
 
 .item h4 {
@@ -143,6 +210,20 @@ section h1 {
 
 .item.focus p {
 	font-size: 1.3em;
+}
+
+.slides .item {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.slides .item.showing {
+		display: block;
+    opacity: 1;
+    z-index: 2;
+		padding-bottom: 5.5rem;
+		min-height: 15.5rem;
 }
 
 footer {

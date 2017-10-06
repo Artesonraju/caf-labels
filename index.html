@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset='utf-8' />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,325 +11,363 @@
 </head>
 <body>
   <header>
-		<div class="container">
-			<img src="pages/icon.png" alt="randonneur"></img>
+		<div id="container">
+			<img src="pages/icon.png" alt="randonneur">
 			<h1>CAF-LABELS</h1>
 			<h4>Labels pour des sorties de ski de randonnée</h4>
+			<a onclick="switchMode()">Mode d'affichage</a>
 		</div>
 	</header>
-	<div class="categories">
-		<div class="container">
-			<h4>Catégories :</h4>
-			<ul class="types">
-				<li class="type"><a href="#rythm">Rythmes</a></li>
-				<li class="type"><a href="#specific">Spécificités</a></li>
-				<li class="type"><a href="#group">Participants</a></li>
-				<li class="type"><a href="#length">Durées</a></li>
-				<li class="type"><a href="#night">Nuits</a></li>
-				<li class="type"><a href="#special">Évènements</a></li>
-			</ul>
+	<div id="content">
+		<a class="slider previous" onclick="prevSlide()">Précédent</a>
+		<a class="slider next" onclick="nextSlide()">Suivant</a>
+		<div class="categories">
+			<div class="container">
+				<h4>Catégories :</h4>
+				<ul class="types">
+					<li class="type"><a href="#rythm">Rythmes</a></li>
+					<li class="type"><a href="#specific">Spécificités</a></li>
+					<li class="type"><a href="#group">Participants</a></li>
+					<li class="type"><a href="#length">Durées</a></li>
+					<li class="type"><a href="#night">Nuits</a></li>
+					<li class="type"><a href="#special">Évènements</a></li>
+				</ul>
+			</div>
 		</div>
+
+		<section id="rythm" class="showing">
+			<h2>Rythmes</h2>
+			<div id="20-rando-cool" class="item showing">
+				<img class="small" onclick="select('20-rando-cool');" src="70x90/20-rando-cool.png" alt="rando cool" title="Rythme et dénivelé accessible au plus grand nombre. Niveau 1 sur 3">
+				<img onclick="unselect();" class="hidden" src="210x270/20-rando-cool.png" alt="rando cool" title="Rythme et dénivelé accessible au plus grand nombre. Niveau 1 sur 3">
+				<div>
+					<h4>Rando cool</h4>
+					<p>Rythme et dénivelé accessible au plus grand nombre.</p>
+					<p>Premier des trois niveaux de rythme.</p>
+				</div>
+			</div>
+
+			<div id="21-rythme-moyen" class="item">
+				<img class="small" onclick="select('21-rythme-moyen');" src="70x90/21-rythme-moyen.png" alt="rythme moyen" title="Forme physique correcte requise, pour soutenir un rythme d'au moins 350m de dénivelé positif à l'heure. Niveau 2 sur 3">
+				<img onclick="unselect();" class="hidden" src="210x270/21-rythme-moyen.png" alt="rythme moyen" title="Forme physique correcte requise, pour soutenir un rythme d'au moins 350m de dénivelé positif à l'heure. Niveau 2 sur 3">
+				<div>
+					<h4>Rythme moyen</h4>
+					<p>Forme physique correcte requise, pour soutenir un rythme d'au moins 350m de dénivelé positif à l'heure.</p>
+					<p>Deuxième des trois niveaux de rythme.</p>
+				</div>
+			</div>
+
+			<div id="22-bon-rythme" class="item">
+				<img class="small" onclick="select('22-bon-rythme');" src="70x90/22-bon-rythme.png" alt="bon rythme" title="Rythme de plus de 450m de dénivelé positif à l'heure, bonne forme physique requise. Niveau 3 sur 3">
+				<img onclick="unselect();" class="hidden" src="210x270/22-bon-rythme.png" alt="bon rythme" title="Rythme de plus de 450m de dénivelé positif à l'heure, bonne forme physique requise. Niveau 3 sur 3">
+				<div>
+					<h4>Bon rythme</h4>
+					<p>Rythme de plus de 450m de dénivelé positif à l'heure, bonne forme physique requise.</p>
+					<p>Dernier des trois niveaux de rythme.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="specific">
+
+			<h2>Spécificités</h2>
+
+			<div id="30-gros-denivelé" class="item">
+				<img class="small" onclick="select('30-gros-denivelé');" src="70x90/30-gros-denivelé.png" alt="gros dénivelé" title="Plus de 1600m de dénivelé positif.">
+				<img onclick="unselect();" class="hidden" src="210x270/30-gros-denivelé.png" alt="gros dénivelé" title="Plus de 1600m de dénivelé positif.">
+				<div>
+					<h4>Gros dénivelé</h4>
+					<p>Plus de 1600m de dénivelé positif.</p>
+					<p>Bonne forme physique requise.</p>
+				</div>
+			</div>
+
+			<div id="31-pente-raide" class="item">
+				<img class="small" onclick="select('31-pente-raide');" src="70x90/31-pente-raide.png" alt="pente raide" title="Descente dans des pentes raides et techniques (cotation S4 ou supérieure).">
+				<img onclick="unselect();" class="hidden" src="210x270/31-pente-raide.png" alt="pente raide" title="Descente dans des pentes raides et techniques (cotation S4 ou supérieure).">
+				<div>
+					<h4>Pente raide</h4>
+					<p>Descente dans des pentes raides et techniques (cotation S4 ou supérieure).</p>
+					<p>Bonne technique de ski requise.</p>
+				</div>
+			</div>
+
+			<div id="32-terrain-alpin" class="item">
+				<img class="small" onclick="select('32-terrain-alpin');" src="70x90/32-terrain-alpin.png" alt="terrain alpin" title="Course empruntant du terrain rocheux, mixte ou aérien.">
+				<img onclick="unselect();" class="hidden" src="210x270/32-terrain-alpin.png" alt="terrain alpin" title="Course empruntant du terrain rocheux, mixte ou aérien.">
+				<div>
+					<h4>Terrain alpin</h4>
+					<p>Course empruntant du terrain rocheux, mixte ou aérien.</p>
+					<p>Piolet et crampons nécessaires.</p>
+				</div>
+			</div>
+
+			<div id="33-terrain-glaciaire" class="item">
+				<img class="small" onclick="select('33-terrain-glaciaire');" src="70x90/33-terrain-glaciaire.png" alt="terrain glaciaire" title="Course se déroulant sur glacier.">
+				<img onclick="unselect();" class="hidden" src="210x270/33-terrain-glaciaire.png" alt="terrain glaciaire" title="Course se déroulant sur glacier.">
+				<div>
+					<h4>Terrain glaciaire</h4>
+					<p>Course se déroulant sur glacier.</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="group">
+
+			<h2>Participants</h2>
+
+			<div id="50-quatre-skieurs" class="item">
+				<img class="small" onclick="select('50-quatre-skieurs');" src="70x90/50-quatre-skieurs.png" alt="quatre skieurs" title="Sortie de quatre personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/50-quatre-skieurs.png" alt="quatre skieurs" title="Sortie de quatre personnes (encadrement compris).">
+				<div>
+					<h4>Quatre skieurs</h4>
+					<p>Sortie de quatre personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="51-cinq-skieurs" class="item">
+				<img class="small" onclick="select('51-cinq-skieurs');" src="70x90/51-cinq-skieurs.png" alt="cinq skieurs" title="Sortie de cinq personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/51-cinq-skieurs.png" alt="cinq skieurs" title="Sortie de cinq personnes (encadrement compris).">
+				<div>
+					<h4>Cinq skieurs</h4>
+					<p>Sortie de cinq personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="52-plus-trois-skieurs" class="item">
+				<img class="small" onclick="select('52-plus-trois-skieurs');" src="70x90/52-plus-trois-skieurs.png" alt="plus trois si coencadré" title="Trois places supplémentaires seront ouvertes si un co-encadrant s'inscrit.">
+				<img onclick="unselect();" class="hidden" src="210x270/52-plus-trois-skieurs.png" alt="plus trois si coencadré" title="Trois places supplémentaires seront ouvertes si un co-encadrant s'inscrit.">
+				<div>
+					<h4>Plus trois si coencadré</h4>
+					<p>Trois places supplémentaires seront ouvertes si un co-encadrant s'inscrit.</p>
+				</div>
+			</div>
+
+			<div id="53-six-skieurs" class="item">
+				<img class="small" onclick="select('53-six-skieurs');" src="70x90/53-six-skieurs.png" alt="six skieurs" title="Sortie de six personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/53-six-skieurs.png" alt="six skieurs" title="Sortie de six personnes (encadrement compris).">
+				<div>
+					<h4>Six skieurs</h4>
+					<p>Sortie de six personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="54-sept-skieurs" class="item">
+				<img class="small" onclick="select('54-sept-skieurs');" src="70x90/54-sept-skieurs.png" alt="sept skieurs" title="Sortie de sept personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/54-sept-skieurs.png" alt="sept skieurs" title="Sortie de sept personnes (encadrement compris).">
+				<div>
+					<h4>Sept skieurs</h4>
+					<p>Sortie de sept personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="55-huit-skieurs" class="item">
+				<img class="small" onclick="select('55-huit-skieurs');" src="70x90/55-huit-skieurs.png" alt="huit skieurs" title="Sortie de huit personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/55-huit-skieurs.png" alt="huit skieurs" title="Sortie de huit personnes (encadrement compris).">
+				<div>
+					<h4>Huit skieurs</h4>
+					<p>Sortie de huit personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="56-neuf-skieurs" class="item">
+				<img class="small" onclick="select('56-neuf-skieurs');" src="70x90/56-neuf-skieurs.png" alt="neuf skieurs" title="Sortie de neuf personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/56-neuf-skieurs.png" alt="neuf skieurs" title="Sortie de neuf personnes (encadrement compris).">
+				<div>
+					<h4>Neuf skieurs</h4>
+					<p>Sortie de neuf personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="57-dix-skieurs" class="item">
+				<img class="small" onclick="select('57-dix-skieurs');" src="70x90/57-dix-skieurs.png" alt="dix skieurs" title="Sortie de dix personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/57-dix-skieurs.png" alt="dix skieurs" title="Sortie de dix personnes (encadrement compris).">
+				<div>
+					<h4>Dix skieurs</h4>
+					<p>Sortie de dix personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="58-douze-skieurs" class="item">
+				<img class="small" onclick="select('58-douze-skieurs');" src="70x90/58-douze-skieurs.png" alt="douze skieurs" title="Sortie de douze personnes (encadrement compris).">
+				<img onclick="unselect();" class="hidden" src="210x270/58-douze-skieurs.png" alt="douze skieurs" title="Sortie de douze personnes (encadrement compris).">
+				<div>
+					<h4>Douze skieurs</h4>
+					<p>Sortie de douze personnes (encadrement compris).</p>
+				</div>
+			</div>
+
+			<div id="59-pleins-skieurs" class="item">
+				<img class="small" onclick="select('59-pleins-skieurs');" src="70x90/59-pleins-skieurs.png" alt="collective" title="Sortie ouverte à un grand nombre de skieurs.">
+				<img onclick="unselect();" class="hidden" src="210x270/59-pleins-skieurs.png" alt="collective" title="Sortie ouverte à un grand nombre de skieurs.">
+				<div>
+					<h4>Collective</h4>
+					<p>Sortie ouverte à un grand nombre de skieurs.</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="length">
+			<h2>Durées</h2>
+
+			<div id="70-deux-jours" class="item">
+				<img class="small" onclick="select('70-deux-jours');" src="70x90/70-deux-jours.png" alt="deux jours" title="Sortie de deux jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/70-deux-jours.png" alt="deux jours" title="Sortie de deux jours.">
+				<div>
+					<h4>Deux jours</h4>
+					<p>Sortie de deux jours.</p>
+				</div>
+			</div>
+
+			<div id="71-trois-jours" class="item">
+				<img class="small" onclick="select('71-trois-jours');" src="70x90/71-trois-jours.png" alt="trois jours" title="Sortie de trois jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/71-trois-jours.png" alt="trois jours" title="Sortie de trois jours.">
+				<div>
+					<h4>Trois jours</h4>
+					<p>Sortie de trois jours.</p>
+				</div>
+			</div>
+
+			<div id="72-quatre-jours" class="item">
+				<img class="small" onclick="select('72-quatre-jours');" src="70x90/72-quatre-jours.png" alt="quatre jours" title="Sortie de quatre jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/72-quatre-jours.png" alt="quatre jours" title="Sortie de quatre jours.">
+			<div>
+					<h4>Quatre jours</h4>
+					<p>Sortie de quatre jours.</p>
+				</div>
+			</div>
+
+			<div id="73-cinq-jours" class="item">
+				<img class="small" onclick="select('73-cinq-jours');" src="70x90/73-cinq-jours.png" alt="cinq jours" title="Sortie de cinq jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/73-cinq-jours.png" alt="cinq jours" title="Sortie de cinq jours.">
+				<div>
+					<h4>Cinq jours</h4>
+					<p>Sortie de cinq jours.</p>
+				</div>
+			</div>
+
+			<div id="74-six-jours" class="item">
+				<img class="small" onclick="select('74-six-jours');" src="70x90/74-six-jours.png" alt="six jours" title="Sortie de six jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/74-six-jours.png" alt="six jours" title="Sortie de six jours.">
+				<div>
+					<h4>Six jours</h4>
+					<p>Sortie de six jours.</p>
+				</div>
+			</div>
+
+			<div id="75-sept-jours" class="item">
+				<img class="small" onclick="select('75-sept-jours');" src="70x90/75-sept-jours.png" alt="sept jours" title="Sortie de sept jours.">
+				<img onclick="unselect();" class="hidden" src="210x270/75-sept-jours.png" alt="sept jours" title="Sortie de sept jours.">
+				<div>
+					<h4>Sept jours</h4>
+					<p>Sortie de sept jours.</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="night">
+			<h2>Nuits</h2>
+
+			<div id="40-nuit-gite" class="item">
+				<img class="small" onclick="select('40-nuit-gite');" src="70x90/animations/40-nuit-gite.gif" alt="en gîte" title="Sortie avec logement prévu en gîte.">
+				<img onclick="unselect();" class="hidden" src="210x270/40-nuit-gite.png" alt="en gîte" title="Sortie avec logement prévu en gîte.">
+				<div>
+					<h4>Nuit en gîte</h4>
+					<p>Sortie avec logement prévu en gîte.</p>
+				</div>
+			</div>
+
+			<div id="41-nuit-refuge" class="item">
+				<img class="small" onclick="select('41-nuit-refuge');" src="70x90/animations/41-nuit-refuge.gif" alt="en refuge" title="Sortie avec logement prévu en refuge.">
+				<img onclick="unselect();" class="hidden" src="210x270/41-nuit-refuge.png" alt="en refuge" title="Sortie avec logement prévu en refuge.">
+				<div>
+					<h4>Nuit en refuge</h4>
+					<p>Sortie avec logement prévu en refuge.</p>
+				</div>
+			</div>
+
+			<div id="42-nuit-chalet" class="item">
+				<img class="small" onclick="select('42-nuit-chalet');" src="70x90/animations/42-nuit-chalet.gif" alt="en chalet" title="Sortie avec logement prévu en chalet.">
+				<img onclick="unselect();" class="hidden" src="210x270/42-nuit-chalet.png" alt="en chalet" title="Sortie avec logement prévu en chalet.">
+				<div>
+					<h4>Nuit en chalet</h4>
+					<p>Sortie avec logement prévu en chalet.</p>
+				</div>
+			</div>
+
+			<div id="43-nuit-abri" class="item">
+				<img class="small" onclick="select('43-nuit-abri');" src="70x90/animations/43-nuit-abri.gif" alt="en abri" title="Sortie avec logement prévu en abri bivouac.">
+				<img onclick="unselect();" class="hidden" src="210x270/43-nuit-abri.png" alt="en abri" title="Sortie avec logement prévu en abri bivouac.">
+				<div>
+					<h4>Nuit en abri</h4>
+					<p>Sortie avec logement prévu en abri bivouac.</p>
+				</div>
+			</div>
+
+			<div id="44-nuit-igloo" class="item">
+				<img class="small" onclick="select('44-nuit-igloo');" src="70x90/animations/44-nuit-igloo.gif" alt="sous igloo" title="Sortie avec nuit prévue sous igloo.">
+				<img onclick="unselect();" class="hidden" src="210x270/44-nuit-igloo.png" alt="sous igloo" title="Sortie avec nuit prévue sous igloo.">
+				<div>
+					<h4>Nuit sous igloo</h4>
+					<p>Sortie avec nuit prévue sous igloo.</p>
+				</div>
+			</div>
+
+			<div id="45-nuit-tente" class="item">
+				<img class="small" onclick="select('45-nuit-tente');" src="70x90/animations/45-nuit-tente.gif" alt="sous tente" title="Sortie avec nuit prévue sous tente.">
+				<img onclick="unselect();" class="hidden" src="210x270/45-nuit-tente.png" alt="sous tente" title="Sortie avec nuit prévue sous tente.">
+				<div>
+					<h4>Nuit sous tente</h4>
+					<p>Sortie avec nuit prévue sous tente.</p>
+				</div>
+			</div>
+
+			<div id="46-nuit-trou" class="item">
+				<img class="small" onclick="select('46-nuit-trou');" src="70x90/animations/46-nuit-trou.gif" alt="dans un trou" title="Sortie avec nuit prévue dans un trou de neige.">
+				<img onclick="unselect();" class="hidden" src="210x270/46-nuit-trou.png" alt="dans un trou" title="Sortie avec nuit prévue dans un trou de neige.">
+				<div>
+					<h4>Nuit dans un trou de neige</h4>
+					<p>Sortie avec nuit prévue dans un trou de neige.</p>
+				</div>
+			</div>
+
+			<div id="47-nuit-bivouac" class="item">
+				<img class="small" onclick="select('47-nuit-bivouac');" src="70x90/animations/47-nuit-bivouac.gif" alt="bivouac" title="Sortie avec nuit à la belle étoile.">
+				<img onclick="unselect();" class="hidden" src="210x270/47-nuit-bivouac.png" alt="bivouac" title="Sortie avec nuit à la belle étoile.">
+				<div>
+					<h4>Bivouac</h4>
+					<p>Sortie avec nuit à la belle étoile.</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="special">
+			<h2>Évènements</h2>
+
+			<div id="10-dva-parc" class="item">
+				<img class="small" onclick="select('10-dva-parc');" src="70x90/animations/10-dva-parc.gif" alt="dva parc" title="Entrainement à la recherche de victime d'avalanche">
+				<img onclick="unselect();" class="hidden" src="210x270/10-dva-parc.png" alt="dva parc" title="Entrainement à la recherche de victime d'avalanche">
+				<div>
+					<h4>DVA parc</h4>
+					<p>Organisé chaque début de saison, le DVA parc permet de s'entrainer à la recherche de victime d'avalanche.</p>
+				</div>
+			</div>
+
+			<div id="11-initiation" class="item">
+				<img class="small" onclick="select('11-initiation');" src="70x90/animations/11-initiation.gif" alt="initiation" title="Sortie réservée aux débutants">
+				<img onclick="unselect();" class="hidden" src="210x270/11-initiation.png" alt="initiation" title="Sortie réservée aux débutants">
+				<div>
+					<h4>Initiation</h4>
+					<p>Organisée chaque début de saison sur un week-end, cette sortie est réservée au débutants.</p>
+				</div>
+			</div>
+
+		</section>
 	</div>
-
-	<section id="rythm">
-		<h1>Rythmes</h1>
-		<div id="20-rando-cool" class="item">
-			<img onclick="select('20-rando-cool');" src="70x90/20-rando-cool.png" alt="rando cool" title="Rythme et dénivelé accessible au plus grand nombre. Niveau 1 sur 3"></img>
-			<div>
-				<h4>Rando cool</h4>
-				<p>Rythme et dénivelé accessible au plus grand nombre.</p>
-				<p>Premier des trois niveaux de rythme.</p>
-			</div>
-		</div>
-
-		<div id="21-rythme-moyen" class="item">
-			<img onclick="select('21-rythme-moyen');" src="70x90/21-rythme-moyen.png" alt="rythme moyen" title="Forme physique correcte requise, pour soutenir un rythme d'au moins 350m de dénivelé positif à l'heure. Niveau 2 sur 3"></img>
-			<div>
-				<h4>Rythme moyen</h4>
-				<p>Forme physique correcte requise, pour soutenir un rythme d'au moins 350m de dénivelé positif à l'heure.</p>
-				<p>Deuxième des trois niveaux de rythme.</p>
-			</div>
-		</div>
-
-		<div id="22-bon-rythme" class="item">
-			<img onclick="select('22-bon-rythme');" src="70x90/22-bon-rythme.png" alt="bon rythme" title="Rythme de plus de 450m de dénivelé positif à l'heure, bonne forme physique requise. Niveau 3 sur 3"></img>
-			<div>
-				<h4>Bon rythme</h4>
-				<p>Rythme de plus de 450m de dénivelé positif à l'heure, bonne forme physique requise.</p>
-				<p>Dernier des trois niveaux de rythme.</p>
-			</div>
-		</div>
-	</section>
-
-	<section id="specific">
-
-		<h1>Spécificités</h1>
-
-		<div id="30-gros-denivelé" class="item">
-			<img onclick="select('30-gros-denivelé');" src="70x90/30-gros-denivelé.png" alt="gros dénivelé" title="Plus de 1600m de dénivelé positif."></img>
-			<div>
-				<h4>Gros dénivelé</h4>
-				<p>Plus de 1600m de dénivelé positif.</p>
-				<p>Bonne forme physique requise.</p>
-			</div>
-		</div>
-
-		<div id="31-pente-raide" class="item">
-			<img onclick="select('31-pente-raide');" src="70x90/31-pente-raide.png" alt="pente raide" title="Descente dans des pentes raides et techniques (cotation S4 ou supérieure)."></img>
-			<div>
-				<h4>Pente raide</h4>
-				<p>Descente dans des pentes raides et techniques (cotation S4 ou supérieure).</p>
-				<p>Bonne technique de ski requise.</p>
-			</div>
-		</div>
-
-		<div id="32-terrain-alpin" class="item">
-			<img onclick="select('32-terrain-alpin');" src="70x90/32-terrain-alpin.png" alt="terrain alpin" title="Course empruntant du terrain rocheux, mixte ou aérien."></img>
-			<div>
-				<h4>Terrain alpin</h4>
-				<p>Course empruntant du terrain rocheux, mixte ou aérien.</p>
-				<p>Piolet et crampons nécessaires.</p>
-			</div>
-		</div>
-
-		<div id="33-terrain-glaciaire" class="item">
-			<img onclick="select('33-terrain-glaciaire');" src="70x90/33-terrain-glaciaire.png" alt="terrain glaciaire" title="Course se déroulant sur glacier."></img>
-			<div>
-				<h4>Terrain glaciaire</h4>
-				<p>Course se déroulant sur glacier.</p>
-			</div>
-		</div>
-
-	</section>
-
-	<section id="group">
-
-		<h1>Participants</h1>
-
-		<div id="50-quatre-skieurs" class="item">
-			<img onclick="select('50-quatre-skieurs');" src="70x90/50-quatre-skieurs.png" alt="quatre skieurs" title="Sortie de quatre personnes (encadrement compris)."></img>
-			<div>
-				<h4>Quatre skieurs</h4>
-				<p>Sortie de quatre personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="51-cinq-skieurs" class="item">
-			<img onclick="select('51-cinq-skieurs');" src="70x90/51-cinq-skieurs.png" alt="cinq skieurs" title="Sortie de cinq personnes (encadrement compris)."></img>
-			<div>
-				<h4>Cinq skieurs</h4>
-				<p>Sortie de cinq personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="52-plus-trois-skieurs" class="item">
-			<img onclick="select('52-plus-trois-skieurs');" src="70x90/52-plus-trois-skieurs.png" alt="plus trois si coencadré" title="Trois places supplémentaires seront ouvertes si un co-encadrant s'inscrit."></img>
-			<div>
-				<h4>Plus trois si coencadré</h4>
-				<p>Trois places supplémentaires seront ouvertes si un co-encadrant s'inscrit.</p>
-			</div>
-		</div>
-
-		<div id="53-six-skieurs" class="item">
-			<img onclick="select('53-six-skieurs');" src="70x90/53-six-skieurs.png" alt="six skieurs" title="Sortie de six personnes (encadrement compris)."></img>
-			<div>
-				<h4>Six skieurs</h4>
-				<p>Sortie de six personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="54-sept-skieurs" class="item">
-			<img onclick="select('54-sept-skieurs');" src="70x90/54-sept-skieurs.png" alt="sept skieurs" title="Sortie de sept personnes (encadrement compris)."></img>
-			<div>
-				<h4>Sept skieurs</h4>
-				<p>Sortie de sept personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="55-huit-skieurs" class="item">
-			<img onclick="select('55-huit-skieurs');" src="70x90/55-huit-skieurs.png" alt="huit skieurs" title="Sortie de huit personnes (encadrement compris)."></img>
-			<div>
-				<h4>Huit skieurs</h4>
-				<p>Sortie de huit personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="56-neuf-skieurs" class="item">
-			<img onclick="select('56-neuf-skieurs');" src="70x90/56-neuf-skieurs.png" alt="neuf skieurs" title="Sortie de neuf personnes (encadrement compris)."></img>
-			<div>
-				<h4>Neuf skieurs</h4>
-				<p>Sortie de neuf personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="57-dix-skieurs" class="item">
-			<img onclick="select('57-dix-skieurs');" src="70x90/57-dix-skieurs.png" alt="dix skieurs" title="Sortie de dix personnes (encadrement compris)."></img>
-			<div>
-				<h4>Dix skieurs</h4>
-				<p>Sortie de dix personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="58-douze-skieurs" class="item">
-			<img onclick="select('58-douze-skieurs');" src="70x90/58-douze-skieurs.png" alt="douze skieurs" title="Sortie de douze personnes (encadrement compris)."></img>
-			<div>
-				<h4>Douze skieurs</h4>
-				<p>Sortie de douze personnes (encadrement compris).</p>
-			</div>
-		</div>
-
-		<div id="59-pleins-skieurs" class="item">
-			<img onclick="select('59-pleins-skieurs');" src="70x90/59-pleins-skieurs.png" alt="collective" title="Sortie ouverte à un grand nombre de skieurs."></img>
-			<div>
-				<h4>Collective</h4>
-				<p>Sortie ouverte à un grand nombre de skieurs.</p>
-			</div>
-		</div>
-
-	</section>
-
-	<section id="length">
-		<h1>Durées</h1>
-
-		<div id="70-deux-jours" class="item">
-			<img onclick="select('70-deux-jours');" src="70x90/70-deux-jours.png" alt="deux jours" title="Sortie de deux jours."></img>
-			<div>
-				<h4>Deux jours</h4>
-				<p>Sortie de deux jours.</p>
-			</div>
-		</div>
-
-		<div id="71-trois-jours" class="item">
-			<img onclick="select('71-trois-jours');" src="70x90/71-trois-jours.png" alt="trois jours" title="Sortie de trois jours."></img>
-			<div>
-				<h4>Trois jours</h4>
-				<p>Sortie de trois jours.</p>
-			</div>
-		</div>
-
-		<div id="72-quatre-jours" class="item">
-			<img onclick="select('72-quatre-jours');" src="70x90/72-quatre-jours.png" alt="quatre jours" title="Sortie de quatre jours."></img>
-			<div>
-				<h4>Quatre jours</h4>
-				<p>Sortie de quatre jours.</p>
-			</div>
-		</div>
-
-		<div id="73-cinq-jours" class="item">
-			<img onclick="select('73-cinq-jours');" src="70x90/73-cinq-jours.png" alt="cinq jours" title="Sortie de cinq jours."></img>
-			<div>
-				<h4>Cinq jours</h4>
-				<p>Sortie de cinq jours.</p>
-			</div>
-		</div>
-
-		<div id="74-six-jours" class="item">
-			<img onclick="select('74-six-jours');" src="70x90/74-six-jours.png" alt="six jours" title="Sortie de six jours."></img>
-			<div>
-				<h4>Six jours</h4>
-				<p>Sortie de six jours.</p>
-			</div>
-		</div>
-
-		<div id="75-sept-jours" class="item">
-			<img onclick="select('75-sept-jours');" src="70x90/75-sept-jours.png" alt="sept jours" title="Sortie de sept jours."></img>
-			<div>
-				<h4>Sept jours</h4>
-				<p>Sortie de sept jours.</p>
-			</div>
-		</div>
-
-	</section>
-
-	<section id="night">
-		<h1>Nuits</h1>
-
-		<div id="40-nuit-gite" class="item">
-			<img onclick="select('40-nuit-gite');" src="70x90/animations/40-nuit-gite.gif" alt="en gîte" title="Sortie avec logement prévu en gîte."></img>
-			<div>
-				<h4>Nuit en gîte</h4>
-				<p>Sortie avec logement prévu en gîte.</p>
-			</div>
-		</div>
-
-		<div id="41-nuit-refuge" class="item">
-			<img onclick="select('41-nuit-refuge');" src="70x90/animations/41-nuit-refuge.gif" alt="en refuge" title="Sortie avec logement prévu en refuge."></img>
-			<div>
-				<h4>Nuit en refuge</h4>
-				<p>Sortie avec logement prévu en refuge.</p>
-			</div>
-		</div>
-
-		<div id="42-nuit-chalet" class="item">
-			<img onclick="select('42-nuit-chalet');" src="70x90/animations/42-nuit-chalet.gif" alt="en chalet" title="Sortie avec logement prévu en chalet."></img>
-			<div>
-				<h4>Nuit en chalet</h4>
-				<p>Sortie avec logement prévu en chalet.</p>
-			</div>
-		</div>
-
-		<div id="43-nuit-abri" class="item">
-			<img onclick="select('43-nuit-abri');" src="70x90/animations/43-nuit-abri.gif" alt="en abri" title="Sortie avec logement prévu en abri bivouac."></img>
-			<div>
-				<h4>Nuit en abri</h4>
-				<p>Sortie avec logement prévu en abri bivouac.</p>
-			</div>
-		</div>
-
-		<div id="44-nuit-igloo" class="item">
-			<img onclick="select('44-nuit-igloo');" src="70x90/animations/44-nuit-igloo.gif" alt="sous igloo" title="Sortie avec nuit prévue sous igloo."></img>
-			<div>
-				<h4>Nuit sous igloo</h4>
-				<p>Sortie avec nuit prévue sous igloo.</p>
-			</div>
-		</div>
-
-		<div id="45-nuit-tente" class="item">
-			<img onclick="select('45-nuit-tente');" src="70x90/animations/45-nuit-tente.gif" alt="sous tente" title="Sortie avec nuit prévue sous tente."></img>
-			<div>
-				<h4>Nuit sous tente</h4>
-				<p>Sortie avec nuit prévue sous tente.</p>
-			</div>
-		</div>
-
-		<div id="46-nuit-trou" class="item">
-			<img onclick="select('46-nuit-trou');" src="70x90/animations/46-nuit-trou.gif" alt="dans un trou" title="Sortie avec nuit prévue dans un trou de neige."></img>
-			<div>
-				<h4>Nuit dans un trou de neige</h4>
-				<p>Sortie avec nuit prévue dans un trou de neige.</p>
-			</div>
-		</div>
-
-		<div id="47-nuit-bivouac" class="item">
-			<img onclick="select('47-nuit-bivouac');" src="70x90/animations/47-nuit-bivouac.gif" alt="bivouac" title="Sortie avec nuit à la belle étoile."></img>
-			<div>
-				<h4>Bivouac</h4>
-				<p>Sortie avec nuit à la belle étoile.</p>
-			</div>
-		</div>
-
-	</section>
-
-	<section id="special">
-		<h1>Évènements</h1>
-
-		<div id="10-dva-parc" class="item">
-			<img onclick="select('10-dva-parc');" src="70x90/animations/10-dva-parc.gif" alt="dva parc" title="Entrainement à la recherche de victime d'avalanche"></img>
-			<div>
-				<h4>DVA parc</h4>
-				<p>Organisé chaque début de saison, le DVA parc permet de s'entrainer à la recherche de victime d'avalanche.</p>
-			</div>
-		</div>
-
-		<div id="11-initiation" class="item">
-			<img onclick="select('11-initiation');" src="70x90/animations/11-initiation.gif" alt="initiation" title="Sortie réservée aux débutants"></img>
-			<div>
-				<h4>Initiation</h4>
-				<p>Organisée chaque début de saison sur un week-end, cette sortie est réservée au débutants.</p>
-			</div>
-		</div>
-
-	</section>
 	<footer>
 		<div>
 			<form action ="70x90.zip" method="get">
@@ -346,15 +384,18 @@
 			Participez à l'amélioration de caf-labels sur <a href="https://github.com/Artesonraju/caf-labels" target="_blank" rel="noopener noreferrer">Github</a>
 		</div>
 	</footer>
-</body>
 <script>
 	let selected = null;
 	let url = null;
+
 	function unselect(){
 		let div = document.getElementById(selected);
 		let img = div.firstChild.nextSibling;
-		if(div) {div.classList.remove('focus');}
-		if(div) {img.src=url;}
+		let big = img.nextElementSibling;
+		if(div) {
+			div.classList.remove('focus');
+			img.classList.remove('hidden');
+			big.classList.add('hidden');}
 		selected = null;
 		url = null;
 	};
@@ -366,9 +407,12 @@
 			let id = selected + '-img';
 			let div = document.getElementById(tag);
 			let img = div.firstChild.nextSibling;
-			if(div) {div.classList.add('focus');}
-			url = img.src;
-			if(img) {img.src='210x270/' + tag + '.png';}
+			let big = img.nextElementSibling;
+			if(div) {
+				div.classList.add('focus');
+				img.classList.add('hidden');
+				big.classList.remove('hidden');}
+
 			selected = tag;
 		}
 	};
@@ -380,48 +424,38 @@
 
 	document.addEventListener("DOMContentLoaded", init);
 
-	let images = [];
-	function preload() {
-			for (let i = 0; i < arguments.length; i++) {
-					images[i] = new Image();
-					images[i].src = preload.arguments[i];
-			}
+	let slides = document.querySelectorAll('.item');
+	let currentSlide = 0;
+
+	let slideMode = false;
+
+	function switchMode() {
+		let div = document.getElementById("content");
+		if(!slideMode) {
+			div.classList.add('slides');
+		} else {
+			div.classList.remove('slides');
+		}
+		slideMode = !slideMode;
 	}
 
-	preload(
-			"210x270/10-dva-parc.png",
-			"210x270/11-initiation.png",
-			"210x270/20-rando-cool.png",
-			"210x270/21-rythme-moyen.png",
-			"210x270/22-bon-rythme.png",
-			"210x270/30-gros-denivelé.png",
-			"210x270/31-pente-raide.png",
-			"210x270/32-terrain-alpin.png",
-			"210x270/33-terrain-glaciaire.png",
-			"210x270/40-nuit-gite.png",
-			"210x270/41-nuit-refuge.png",
-			"210x270/42-nuit-chalet.png",
-			"210x270/43-nuit-abri.png",
-			"210x270/44-nuit-igloo.png",
-			"210x270/45-nuit-tente.png",
-			"210x270/46-nuit-trou.png",
-			"210x270/47-nuit-bivouac.png",
-			"210x270/50-quatre-skieurs.png",
-			"210x270/51-cinq-skieurs.png",
-			"210x270/52-plus-trois-skieurs.png",
-			"210x270/53-six-skieurs.png",
-			"210x270/54-sept-skieurs.png",
-			"210x270/55-huit-skieurs.png",
-			"210x270/56-neuf-skieurs.png",
-			"210x270/57-dix-skieurs.png",
-			"210x270/58-douze-skieurs.png",
-			"210x270/59-pleins-skieurs.png",
-			"210x270/70-deux-jours.png",
-			"210x270/71-trois-jours.png",
-			"210x270/72-quatre-jours.png",
-			"210x270/73-cinq-jours.png",
-			"210x270/74-six-jours.png",
-			"210x270/75-sept-jours.png",
-	)
+	function moveSlide(x) {
+		slides[currentSlide].classList.remove('showing');
+		slides[currentSlide].parentElement.classList.remove('showing');
+		currentSlide = (currentSlide+slides.length+x)%slides.length;
+		slides[currentSlide].classList.add('showing');
+		slides[currentSlide].parentElement.classList.add('showing');
+	}
+
+	console.log("coucou");
+
+	function prevSlide() {
+		moveSlide(-1);
+	}
+
+	function nextSlide() {
+    moveSlide(1);
+	}
+
 </script>
 </html>
