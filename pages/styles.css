@@ -88,13 +88,12 @@ header a:hover {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
 .categories li {
-	padding: 0 1rem 0 1rem;
+	padding: 0 0.5rem 0 0.5rem;
 	padding-bottom: 0.5rem;
-	min-width: 120px;
 }
 
 .categories a {
