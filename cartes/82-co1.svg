@@ -14,7 +14,7 @@
    inkscape:export-xdpi="576"
    inkscape:export-filename="/home/etienne/Crafts/caf-labels/210x270/12-theorie.png"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="82-ca1.svg"
+   sodipodi:docname="82-co1.svg"
    id="svg8"
    version="1.1"
    viewBox="0 0 9.2604169 11.90625"
@@ -177,9 +177,9 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="13.720602"
-     inkscape:cx="9.3475117"
-     inkscape:zoom="16"
+     inkscape:cy="17.211104"
+     inkscape:cx="23.102345"
+     inkscape:zoom="22.627418"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -422,30 +422,6 @@
          x="76.44915"
          y="287.29541"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.55565095px;font-family:'Schumacher Clean';-inkscape-font-specification:'Schumacher Clean Bold';letter-spacing:-0.0778615px;stroke-width:0.27782547">SOMMET</tspan></text>
-    <g
-       id="g1032-8"
-       transform="matrix(1.3018236,0.13655394,-0.36967539,1.2773706,106.07123,-82.42295)"
-       style="stroke:#000000;stroke-width:0.00221245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-      <rect
-         y="292.50208"
-         x="7.6729174"
-         height="0.3976191"
-         width="0.5291658"
-         id="rect1024-7"
-         style="opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00221245;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
-      <path
-         sodipodi:nodetypes="cccc"
-         inkscape:connector-curvature="0"
-         id="path1028-9"
-         d="m 7.5191287,292.5196 0.4191982,-0.008 -8.268e-4,-0.32173 z"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00221245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00221245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 8.3548385,292.5196 -0.4191982,-0.008 8.268e-4,-0.32173 z"
-         id="path1071-2"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccc" />
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.15874998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.31749999, 0.15874999;stroke-dashoffset:0;stroke-opacity:1"
        d="m 5.0432418,293.68545 0.125083,1.5489"
@@ -464,5 +440,22 @@
        id="path1093-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <g
+       id="g1032"
+       transform="matrix(1.3018236,0.13655394,-0.36967539,1.2773706,106.07123,-82.42295)"
+       style="stroke:#000000;stroke-width:0.00221245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <rect
+         y="292.50208"
+         x="7.6729174"
+         height="0.3976191"
+         width="0.5291658"
+         id="rect1024"
+         style="opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00404263;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00404263;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 7.5182401,292.53228 0.4173385,-0.32973 0.4183713,0.32973 z"
+         id="path1506"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>
