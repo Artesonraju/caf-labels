@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Formations - caf-labels</title>
+	<meta name="description" content="Labels pour les formations">
+	<link rel="stylesheet" href="../styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	<link rel="icon" type="image/png" href="formations.ico">
+</head>
+<body class="formations">
+  <header>
+		<div id="container">
+			<img src="formations.png" alt="avalanche">
+			<h1>CAF-LABELS</h1>
+			<h4>Labels pour des formations</h4>
+			<a class="back-home" href="..">Retour à l'accueil</a>
+			<a class="display-mode" onclick="switchMode()">Mode d'affichage</a>
+		</div>
+	</header>
+	<div id="content">
+		<a class="slider previous" onclick="prevSlide()">Précédent</a>
+		<a class="slider next" onclick="nextSlide()">Suivant</a>
+		<div class="categories">
+		    <form action ="caf-labels-formations.zip" method="get">
+			    <button type="submit">Télécharger les labels</button>
+		    </form>
+        </div>
+		<section id="formations" class="showing">
+
+			<div id="80-na1" class="item showing">
+				<img class="small" onclick="select('80-na1');" src="70x90/80-na1.png" alt="neige & avalanche 1" title="Formation Neige et Avalanche niveau 1">
+				<img onclick="unselect();" class="hidden" src="210x270/80-na1.png" alt="neige & avalanche 1" title="Formation Neige et Avalanche niveau 1">
+				<div>
+					<h4>Neige et Avalanche Niveau 1</h4>
+				</div>
+				<p>Formation d'initiation à la nivologie et aux avalanches.</p>
+			</div>
+
+			<div id="81-na2" class="item">
+				<img class="small" onclick="select('81-na2');" src="70x90/81-na2.png" alt="neige & avalanche 2" title="Formation Neige et Avalanche niveau 2">
+				<img onclick="unselect();" class="hidden" src="210x270/81-na2.png" alt="neige & avalanche 2" title="Formation Neige et Avalanche niveau 2">
+				<div>
+					<h4>Neige et Avalanche Niveau 2</h4>
+					<p>Formation de perfectionnement à la nivologie, aux avalanches et à la conduite de sortie.</p>
+				</div>
+			</div>
+
+			<div id="82-co1" class="item">
+				<img class="small" onclick="select('82-co1');" src="70x90/82-co1.png" alt="carto & orientation 1" title="Formation Cartographie et Orientation niveau 1">
+				<img onclick="unselect();" class="hidden" src="210x270/82-co1.png" alt="carto & orientation 1" title="Formation Cartographie et Orientation niveau 1">
+				<div>
+					<h4>Cartographie et Orientation Niveau 1</h4>
+				</div>
+				<p>Formation d'initiation à la cartographie et l'orientation.</p>
+			</div>
+
+			<div id="83-co2" class="item">
+				<img class="small" onclick="select('83-co2');" src="70x90/83-co2.png" alt="carto & orientation 2" title="Formation Cartographie et Orientation niveau 2">
+				<img onclick="unselect();" class="hidden" src="210x270/83-co2.png" alt="carto & orientation 2" title="Formation Cartographie et Orientation niveau 2">
+				<div>
+					<h4>Neige et Avalanche Niveau 2</h4>
+					<p>Formation de perfectionnement à la cartographie et l'orientation.</p>
+				</div>
+			</div>
+
+		</section>
+	</div>
+	<footer>
+		<div>
+			<form action ="../caf-labels.zip" method="get">
+				<button type="submit">Télécharger tous les labels</button>
+			</form>
+		</div>
+		<div>
+			Les labels sont distribués sous license CC0.
+			<a href="https://creativecommons.org/share-your-work/public-domain/cc0" target="_blank" rel="noopener noreferrer">
+				Plus d'information
+			</a>
+		</div>
+		<div>
+			Participez à l'amélioration de caf-labels sur <a href="https://github.com/Artesonraju/caf-labels" target="_blank" rel="noopener noreferrer">Github</a>
+		</div>
+	</footer>
+  <script src="../script.js"></script>
+</html>

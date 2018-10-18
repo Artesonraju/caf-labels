@@ -1,0 +1,430 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+  font-size: 1.1em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  color: #222;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+  position: relative;
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.racine {
+  background-color: #c0c0c0;
+  color: #222;
+}
+
+.ski-rando header {
+  background-color: #12657B;
+  color: #02171E;
+}
+
+.raquettes header {
+  background-color: #126C16;
+  color: #021b04;
+}
+
+.formations header {
+  background-color: #901317;
+  color: #210202;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  color: #f3f3f3;
+}
+
+.racine header h1 {
+  color: #030303;
+}
+
+header img {
+	display: block;
+	margin: auto;
+	width: 40px;
+}
+
+header h4 {
+  font-weight: 600;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+}
+
+header a {
+	position: absolute;
+	cursor: pointer;
+    text-decoration: underline;
+}
+
+header a:hover {
+	filter: brightness(140%);
+    text-decoration: underline;
+}
+
+.icons {
+    margin: 0 auto;
+    width: 120px;
+}
+
+.icons img{
+    display: inline-block;
+}
+
+.display-mode {
+	bottom: 0.5em;
+	right: 0.5em;
+}
+
+.back-home {
+	bottom: 0.5em;
+	left: 0.5em;
+}
+
+.categories {
+	padding: 2rem 1rem 2rem;
+	background-color: #141414;
+}
+
+.racine .categories{
+  color: #bbb;
+}
+
+.ski-rando .categories{
+  color: #0C85A5;
+}
+
+.raquettes .categories{
+  color: #23a82c;
+}
+
+.formations .categories{
+  color: #C33737;
+}
+
+button {
+    color: inherit;
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    text-decoration: underline;
+}
+
+.categories form {
+    text-align: center;
+}
+
+.categories h4{
+	font-size: 1.2em;
+}
+
+.categories ul {
+	padding-top: 0.5rem;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.categories li {
+	padding: 0 0.5rem 0 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.categories a {
+	color: #ddd;
+}
+
+.categories a:hover, .categories button:hover {
+	filter: brightness(80%);
+    text-decoration: underline;
+}
+
+.slides {
+	position: relative;
+}
+
+.slides .categories {
+	display: none;
+}
+
+section {
+	max-width: 1000px;
+	margin: auto;
+	padding: 2rem 0.5rem 2.5rem 0.5rem;
+}
+
+section h2 {
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+	padding-bottom: 1rem;
+}
+
+.section-link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    min-width: 60%;
+    text-decoration: underline;
+}
+
+.section-link img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.section-link span:hover{
+	filter: brightness(180%);
+}
+
+.racine section {
+    margin: 2rem auto;
+    padding: 1rem 0.5rem;
+    border-radius: 7px;
+}
+
+.racine .ski-rando{
+  background-color: #12657B;
+  color: #02171E;
+}
+
+.racine .raquettes {
+  background-color: #126C16;
+  color: #021b04;
+}
+
+.racine .formations {
+  background-color: #901317;
+  color: #210202;
+}
+
+.marquee {
+    height: 90px;
+    width: 210px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5%;
+}
+
+.marquee-inner {
+  display: block;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+@keyframes marquee-ski-rando {
+  0% { transform: none; }
+  100% { transform: translate3d(-490px, 0, 0); }
+}
+
+.ski-rando .marquee-inner {
+  width: 700px;
+  animation: marquee-ski-rando 7s linear infinite;
+}
+
+@keyframes marquee-raquettes {
+  0% { transform: translate3d(-210px, 0, 0); }
+  100% { transform: none; }
+}
+
+.raquettes .marquee-inner {
+  width: 420px;
+  animation: marquee-raquettes 3s linear infinite;
+}
+
+@keyframes marquee-formations {
+  0% { transform: none; }
+  100% { transform: translate3d(-280px, 0, 0); }
+}
+
+.formations .marquee-inner {
+  width: 490px;
+  animation: marquee-formations 4s linear infinite;
+}
+
+.slides section:not(.showing) {
+	padding: 0;
+}
+
+.slides section:not(.showing) > h2 {
+	display: none;
+}
+
+.slider {
+	display: none;
+}
+
+.slides .slider {
+	display: block;
+	color: #222;
+	position: absolute;
+	top: 1em;
+	cursor: pointer;
+    text-decoration: underline;
+}
+
+.slides .slider:hover {
+	filter: brightness(160%);
+}
+
+.slides .slider.previous {
+	left : 1em;
+}
+
+.slides .slider.next {
+	right: 1em;
+}
+
+.item {
+	clear: both;
+	padding-top: 1rem;
+	padding-bottom: 2.5rem;
+	min-height: 5.5rem;
+}
+
+.item.focus {
+	padding-bottom: 4.5rem;
+	min-height: 13.5rem;
+}
+
+.item img {
+		float: left;
+		margin-right: 1rem;
+		cursor: pointer;
+}
+
+.item img.hidden {
+	display: none;
+}
+
+.slides .item img {
+	pointer-events: none;
+}
+
+.slides .item img {
+	display: none;
+}
+
+.slides .item img:not(.small) {
+	display: block;
+}
+
+.item h4 {
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: 600;
+  font-size: 1.3em;
+}
+
+.item.focus h4 {
+	padding-top: 2rem;
+	font-weight: 600;
+  font-size: 2em;
+}
+
+.item p {
+	padding-top: 0.3rem;
+}
+
+.item.focus p {
+	font-size: 1.3em;
+}
+
+.slides .item {
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.slides .item.showing {
+		display: block;
+    opacity: 1;
+    z-index: 2;
+		padding-bottom: 5.5rem;
+		min-height: 15.5rem;
+}
+
+.slides section h2 {
+	font-size: 2.5em;
+	padding-bottom: 4rem;
+}
+
+.slides .item h4 {
+  font-size: 2.5em;
+}
+
+.slides .item p {
+	font-size: 1.8em;
+}
+
+footer {
+	color: #fff;
+	background-color: #222;
+	padding: 2rem 0.5rem 2rem 0.5rem;
+	text-align: center;
+}
+
+footer > div {
+	padding: 0.5rem 0 0.5rem;
+}
+
+footer a{
+	color: inherit;
+    text-decoration: underline;
+}
+
+footer a:hover, footer button:hover{
+	filter: brightness(70%);
+}
+
+.racine footer {
+  background-color: #c0c0c0;
+  color: #222;
+}
+
+.racine footer a:hover, .racine footer button:hover{
+	filter: brightness(180%);
+}
+
