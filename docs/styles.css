@@ -217,10 +217,17 @@ section h2 {
 	filter: brightness(180%);
 }
 
+.racine a {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+    max-width: 1000px;
+}
+
 .racine section {
-    margin: 2rem auto;
     padding: 1rem 0.5rem;
     border-radius: 7px;
+    text-align: center;
 }
 
 .racine .ski-rando{
@@ -239,24 +246,22 @@ section h2 {
 }
 
 .marquee {
+    display: inline-block;
+    vertical-align: middle;
     height: 90px;
     width: 210px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5%;
 }
 
 .marquee-inner {
   display: block;
   backface-visibility: hidden;
-  perspective: 1000;
 }
 
 @keyframes marquee-ski-rando {
   0% { transform: none; }
-  100% { transform: translate3d(-490px, 0, 0); }
+  100% { transform: translateX(-490px); }
 }
 
 .ski-rando .marquee-inner {
@@ -265,7 +270,7 @@ section h2 {
 }
 
 @keyframes marquee-raquettes {
-  0% { transform: translate3d(-210px, 0, 0); }
+  0% { transform: translateX(-210px); }
   100% { transform: none; }
 }
 
@@ -276,12 +281,12 @@ section h2 {
 
 @keyframes marquee-formations {
   0% { transform: none; }
-  100% { transform: translate3d(-280px, 0, 0); }
+  100% { transform: translateX(-420px); }
 }
 
 .formations .marquee-inner {
-  width: 490px;
-  animation: marquee-formations 4s linear infinite;
+  width: 630px;
+  animation: marquee-formations 6s linear infinite;
 }
 
 .slides section:not(.showing) {
