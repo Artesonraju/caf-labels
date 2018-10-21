@@ -217,7 +217,7 @@ section h2 {
 	filter: brightness(180%);
 }
 
-.racine a {
+.racine #content a {
     display: block;
     margin: 1.5rem auto;
     padding: 0 1.5rem;
