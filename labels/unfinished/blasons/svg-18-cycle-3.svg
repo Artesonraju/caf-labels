@@ -15,8 +15,8 @@
    viewBox="0 0 13.229167 15.875"
    version="1.1"
    id="svg8"
-   sodipodi:docname="svg-17-cycle-3.svg"
-   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="svg-18-cycle-3.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    inkscape:export-filename="/home/etienne/Documents/CAF/labels/100x120/v1-17-cycle-3.png"
    inkscape:export-xdpi="192"
    inkscape:export-ydpi="192">
@@ -118,6 +118,12 @@
        id="path4636-3-3-2-3"
        d="m 13.002663,293.85892 a 2.8764884,2.8764884 0 0 1 -2.876488,2.87649 2.8764884,2.8764884 0 0 1 -2.8764885,-2.87649 2.8764884,2.8764884 0 0 1 2.8764885,-2.87649 2.8764884,2.8764884 0 0 1 2.876488,2.87649 z"
        style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.17591217;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path873"
+       d="m 0.35186491,284.56636 c 4.33269019,-2.01806 8.59476709,-1.82813 12.54525009,0"
+       style="fill:none;stroke:#ef0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -126,9 +132,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.12"
-     inkscape:cx="-8.6784739"
-     inkscape:cy="11.327642"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="5.4348647"
+     inkscape:cy="16.647313"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"

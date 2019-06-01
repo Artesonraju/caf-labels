@@ -38,6 +38,10 @@ cd ../raquettes
 export_sizes 70 90
 export_sizes 210 270
 zip_folder ./70x90 caf-labels-raquettes
+cd ../alpi
+export_sizes 70 90
+export_sizes 210 270
+zip_folder ./70x90 caf-labels-alpi
 cd ../formations
 export_sizes 70 90
 export_sizes 210 270
@@ -48,6 +52,7 @@ rm -rf ./all
 mkdir ./all
 cp -rf ./ski-rando/70x90 ./all/ski-rando
 cp -rf ./raquettes/70x90 ./all/raquettes
+cp -rf ./alpi/70x90 ./all/alpi
 cp -rf ./formations/70x90 ./all/formations
 cd ./all
 zip -r ../caf-labels.zip *
@@ -56,20 +61,26 @@ rm -rf ./all
 cd ..
 rm -rf ./docs/ski-rando/70x90
 rm -rf ./docs/raquettes/70x90
+rm -rf ./docs/alpi/70x90
 rm -rf ./docs/formations/70x90
 rm -rf ./docs/ski-rando/70x90.zip
 rm -rf ./docs/raquettes/70x90.zip
+rm -rf ./docs/alpi/70x90.zip
 rm -rf ./docs/formations/70x90.zip
 rm -rf ./docs/ski-rando/210x270
 rm -rf ./docs/raquettes/210x270
+rm -rf ./docs/alpi/210x270
 rm -rf ./docs/formations/210x270
 cp -r ./labels/ski-rando/70x90 ./docs/ski-rando
 cp ./labels/ski-rando/caf-labels-ski-rando.zip ./docs/ski-rando
 cp -r ./labels/raquettes/70x90 ./docs/raquettes
 cp ./labels/raquettes/caf-labels-raquettes.zip ./docs/raquettes
+cp -r ./labels/alpi/70x90 ./docs/alpi
+cp ./labels/alpi/caf-labels-alpi.zip ./docs/alpi
 cp -r ./labels/formations/70x90 ./docs/formations
 cp ./labels/formations/caf-labels-formations.zip ./docs/formations
 cp ./labels/caf-labels.zip ./docs
 cp -r ./labels/ski-rando/210x270 ./docs/ski-rando
 cp -r ./labels/raquettes/210x270 ./docs/raquettes
+cp -r ./labels/alpi/210x270 ./docs/alpi
 cp -r ./labels/formations/210x270 ./docs/formations

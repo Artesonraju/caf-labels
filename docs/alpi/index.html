@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Alpinisme - caf-labels</title>
+	<meta name="description" content="Labels pour l'alpinisme">
+	<link rel="stylesheet" href="../styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	<link rel="icon" type="image/png" href="alpi.ico">
+</head>
+<body class="alpi">
+  <header>
+		<div id="container">
+			<img src="alpi.png" alt="piolet">
+			<h1>CAF-LABELS</h1>
+			<h4>Labels pour l'alpinisme</h4>
+			<a class="back-home" href="..">Retour à l'accueil</a>
+			<a class="display-mode" onclick="switchMode()">Mode d'affichage</a>
+		</div>
+	</header>
+	<div id="content">
+		<a class="slider previous" onclick="prevSlide()">Précédent</a>
+		<a class="slider next" onclick="nextSlide()">Suivant</a>
+		<div class="categories">
+		    <form action ="caf-labels-alpi.zip" method="get">
+			    <button type="submit">Télécharger les labels</button>
+		    </form>
+        </div>
+		<section id="alpi" class="showing">
+
+			<div id="11-decouverte" class="item showing">
+				<img class="small" onclick="select('11-decouverte');" src="70x90/11-decouverte.png" alt="découverte" title="Découverte">
+				<img onclick="unselect();" class="hidden" src="210x270/11-decouverte.png" alt="découverte" title="Découverte">
+				<div>
+					<h4>Découverte</h4>
+				    <p>Cotation globale autour de PD - cotation engagement I - cotation glace 3+</p>
+				</div>
+			</div>
+
+			<div id="12-progression" class="item">
+				<img class="small" onclick="select('12-progression');" src="70x90/12-progression.png" alt="progression" title="Progression">
+				<img onclick="unselect();" class="hidden" src="210x270/12-progression.png" alt="progression" title="Progression">
+				<div>
+					<h4>Progression</h4>
+					<p>Cotation globale autour de AD - cotation engagement II - cotation glace 4</p>
+				</div>
+			</div>
+
+			<div id="13-autonomie" class="item">
+				<img class="small" onclick="select('13-autonomie');" src="70x90/13-autonomie.png" alt="autonomie" title="Autonomie">
+				<img onclick="unselect();" class="hidden" src="210x270/13-autonomie.png" alt="autonomie" title="Autonomie">
+				<div>
+					<h4>Autonomie</h4>
+				    <p>Cotation globale autour de D - cotation engagement III et plus - cotation glace 4+</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div>
+			<form action ="../caf-labels.zip" method="get">
+				<button type="submit">Télécharger tous les labels</button>
+			</form>
+		</div>
+		<div>
+			Les labels sont distribués sous license CC0.
+			<a href="https://creativecommons.org/share-your-work/public-domain/cc0" target="_blank" rel="noopener noreferrer">
+				Plus d'information
+			</a>
+		</div>
+		<div>
+			Participez à l'amélioration de caf-labels sur <a href="https://github.com/Artesonraju/caf-labels" target="_blank" rel="noopener noreferrer">Github</a>
+		</div>
+	</footer>
+  <script src="../script.js"></script>
+</html>
