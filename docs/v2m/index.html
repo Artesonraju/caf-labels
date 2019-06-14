@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vélo de Montagne - caf-labels</title>
+	<meta name="description" content="Labels pour le vélo de montagne">
+	<link rel="stylesheet" href="../styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	<link rel="icon" type="image/png" href="v2m.ico">
+</head>
+<body class="v2m">
+  <header>
+		<div id="container">
+			<img src="v2m.png" alt="piolet">
+			<h1>CAF-LABELS</h1>
+			<h4>Labels pour le vélo de montagne</h4>
+			<a class="back-home" href="..">Retour à l'accueil</a>
+			<a class="display-mode" onclick="switchMode()">Mode d'affichage</a>
+		</div>
+	</header>
+	<div id="content">
+		<a class="slider previous" onclick="prevSlide()">Précédent</a>
+		<a class="slider next" onclick="nextSlide()">Suivant</a>
+		<div class="categories">
+		    <form action ="caf-labels-v2m.zip" method="get">
+			    <button type="submit">Télécharger les labels</button>
+		    </form>
+            <div class="container">
+				<h4>Catégories :</h4>
+				<ul class="types">
+				  <li class="type"><a href="#technique">Technique</a></li>
+				  <li class="type"><a href="#physique">Physique</a></li>
+				  <li class="type"><a href="#specific">Spécificités</a></li>
+				</ul>
+			</div>
+        </div>
+		<section id="technique" class="showing">
+			<h2>Technique</h2>
+			<div id="20-t2" class="item showing">
+				<img class="small" onclick="select('20-t2');" src="70x90/20-t2.png" alt="t2" title="T2">
+				<img onclick="unselect();" class="hidden" src="210x270/20-t2.png" alt="t2" title="T2">
+				<div>
+					<h4>T2</h4>
+				    <p>Cotation technique 2 : pas ou très peu de passages techniques, pilotage facile, chemins roulants.</p>
+				</div>
+			</div>
+
+			<div id="21-t3" class="item">
+				<img class="small" onclick="select('21-t3');" src="70x90/21-t3.png" alt="t3" title="T3">
+				<img onclick="unselect();" class="hidden" src="210x270/21-t3.png" alt="t3" title="T3">
+				<div>
+					<h4>T3</h4>
+					<p>Cotation technique 3 : des passages techniques réguliers tels que de petites et moyennes marches, des racines, des épingles peu serrées... Il peut y avoir de l’expo mais sur un court passage avec parfois portage peu long.</p>
+				</div>
+			</div>
+
+			<div id="22-t4" class="item">
+				<img class="small" onclick="select('22-t4');" src="70x90/22-t4.png" alt="t4" title="T4">
+				<img onclick="unselect();" class="hidden" src="210x270/22-t4.png" alt="t4" title="T4">
+				<div>
+					<h4>T4</h4>
+				    <p>Cotation technique 4 : terrain accidenté, des marches importantes, franchissement d’obstacles trialisants, des épingles serrées, terrain de montagne, pentes raides... Il peut y avoir de l’exposition et du portage long.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="physique">
+			<h2>Physique</h2>
+			<div id="30-p2" class="item">
+				<img class="small" onclick="select('30-p2');" src="70x90/30-p2.png" alt="p2" title="P2">
+				<img onclick="unselect();" class="hidden" src="210x270/30-p2.png" alt="p2" title="P2">
+				<div>
+					<h4>P2</h4>
+				    <p>Cotation physique 2 : 300 à  600m D+ max rythme tranquille. Débutants en vélo de montagne bienvenus.</p>
+				</div>
+			</div>
+
+			<div id="31-p3" class="item">
+				<img class="small" onclick="select('31-p3');" src="70x90/31-p3.png" alt="p3" title="P3">
+				<img onclick="unselect();" class="hidden" src="210x270/31-p3.png" alt="p3" title="P3">
+				<div>
+					<h4>P3</h4>
+				    <p>Cotation physique 3 : 600 à 1200m D+. Possiblement du poussage ou portage en montée.</p>
+				</div>
+			</div>
+
+			<div id="32-p4" class="item">
+				<img class="small" onclick="select('32-p4');" src="70x90/32-p4.png" alt="p4" title="P4">
+				<img onclick="unselect();" class="hidden" src="210x270/32-p4.png" alt="p4" title="P4">
+				<div>
+					<h4>P4</h4>
+				    <p>Cotation physique 4 : 1200 à 2000m D+. Possiblement du portage sur de longues portions.</p>
+				</div>
+			</div>
+
+			<div id="33-p5" class="item">
+				<img class="small" onclick="select('33-p5');" src="70x90/33-p5.png" alt="p5" title="P5">
+				<img onclick="unselect();" class="hidden" src="210x270/33-p5.png" alt="p5" title="P5">
+				<div>
+					<h4>P5</h4>
+				    <p>Cotation physique 5 : plus de 2000m D+. Possiblement du portage sur de longues portions.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="specific">
+			<h2>Spécificités</h2>
+			<div id="15-poussage" class="item">
+				<img class="small" onclick="select('15-poussage');" src="70x90/15-poussage.png" alt="poussage" title="Poussage">
+				<img onclick="unselect();" class="hidden" src="210x270/15-poussage.png" alt="poussage" title="Poussage">
+				<div>
+					<h4>Poussage</h4>
+				    <p>Le parcours nécessite de pousser le vélo.</p>
+				</div>
+			</div>
+
+			<div id="16-terrain-alpin" class="item">
+				<img class="small" onclick="select('16-terrain-alpin');" src="70x90/16-terrain-alpin.png" alt="terrain-alpin" title="Terrain alpin">
+				<img onclick="unselect();" class="hidden" src="210x270/16-terrain-alpin.png" alt="terrain-alpin" title="Terrain alpin">
+				<div>
+					<h4>Terrain alpin</h4>
+				    <p>Course empruntant du terrain rocheux, mixte ou aérien. Nécessité de porter le vélo.</p>
+				</div>
+			</div>
+
+			<div id="14-itinerance" class="item">
+				<img class="small" onclick="select('14-itinerance');" src="70x90/14-itinerance.png" alt="itinérance" title="Itinérance">
+				<img onclick="unselect();" class="hidden" src="210x270/14-itinerance.png" alt="itinérance" title="Itinérance">
+				<div>
+					<h4>Itinérance</h4>
+				    <p>Sortie de plusieurs jours.</p>
+				</div>
+			</div>
+
+			<div id="11-carto-orientation" class="item">
+				<img class="small" onclick="select('11-carto-orientation');" src="70x90/11-carto-orientation.png" alt="carto-orientation" title="Cartographie et orientation">
+				<img onclick="unselect();" class="hidden" src="210x270/11-carto-orientation.png" alt="carto-orientation" title="Cartographie et orientation">
+				<div>
+					<h4>Cartographie et orientation</h4>
+				    <p>Préparation de la sortie en amont et/ou cartographie sur le terrain.</p>
+				</div>
+			</div>
+
+			<div id="12-mecanique" class="item">
+				<img class="small" onclick="select('12-mecanique');" src="70x90/12-mecanique.png" alt="mécanique" title="Mécanique">
+				<img onclick="unselect();" class="hidden" src="210x270/12-mecanique.png" alt="mécanique" title="Mécanique">
+				<div>
+					<h4>Mécanique</h4>
+				    <p>Atelier mécanique au cairn.</p>
+				</div>
+			</div>
+
+			<div id="13-maniabilite" class="item">
+				<img class="small" onclick="select('13-maniabilite');" src="70x90/13-maniabilite.png" alt="maniabilité" title="Maniabilité">
+				<img onclick="unselect();" class="hidden" src="210x270/13-maniabilite.png" alt="maniabilité" title="Maniabilité">
+				<div>
+					<h4>Maniabilité</h4>
+				    <p>Travail technique sur le terrain, progression (passages de marches en montée et descente, épingles, racines…).</p>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<footer>
+		<div>
+			<form action ="../caf-labels.zip" method="get">
+				<button type="submit">Télécharger tous les labels</button>
+			</form>
+		</div>
+		<div>
+			Les labels sont distribués sous license CC0.
+			<a href="https://creativecommons.org/share-your-work/public-domain/cc0" target="_blank" rel="noopener noreferrer">
+				Plus d'information
+			</a>
+		</div>
+		<div>
+			Participez à l'amélioration de caf-labels sur <a href="https://github.com/Artesonraju/caf-labels" target="_blank" rel="noopener noreferrer">Github</a>
+		</div>
+	</footer>
+  <script src="../script.js"></script>
+</html>

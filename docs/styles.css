@@ -67,6 +67,11 @@ header {
   color: #322700;
 }
 
+.v2m header {
+  background-color: #3a1ac3;
+  color: #08031d;
+}
+
 header h1 {
   font-weight: 600;
   font-size: 2em;
@@ -87,7 +92,7 @@ header img {
 header h4 {
   font-weight: 600;
   font-size: 1.4em;
-  text-align: center;
+  text-align: center;#specific
   margin: 0;
 }
 
@@ -104,7 +109,7 @@ header a:hover {
 
 .icons {
     margin: 0 auto;
-    width: 160px;
+    width: 200px;
 }
 
 .icons img{
@@ -144,6 +149,10 @@ header a:hover {
 
 .alpi .categories{
   color: #d1a501;
+}
+
+.v2m .categories{
+  color: #3117a1;
 }
 
 button {
@@ -259,6 +268,11 @@ section h2 {
   color: #322700;
 }
 
+.racine .v2m {
+  background-color: #3a1ac3;
+  color: #08031d;
+}
+
 .marquee {
     display: inline-block;
     vertical-align: middle;
@@ -293,6 +307,26 @@ section h2 {
   animation: marquee-raquettes 3s linear infinite;
 }
 
+@keyframes marquee-alpi {
+  0% { transform: none; }
+  100% { transform: translateX(-210px); }
+}
+
+.alpi .marquee-inner {
+  width: 420px;
+  animation: marquee-alpi 3s linear infinite;
+}
+
+@keyframes marquee-v2m {
+  0% { transform: translateX(-490px); }
+  100% { transform: none; }
+}
+
+.v2m .marquee-inner {
+  width: 700px;
+  animation: marquee-v2m 7s linear infinite;
+}
+
 @keyframes marquee-formations {
   0% { transform: none; }
   100% { transform: translateX(-420px); }
@@ -302,17 +336,6 @@ section h2 {
   width: 630px;
   animation: marquee-formations 6s linear infinite;
 }
-
-@keyframes marquee-alpi {
-  0% { transform: translateX(-210px); }
-  100% { transform: none; }
-}
-
-.alpi .marquee-inner {
-  width: 420px;
-  animation: marquee-raquettes 3s linear infinite;
-}
-
 
 .slides section:not(.showing) {
 	padding: 0;
